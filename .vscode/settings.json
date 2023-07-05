@@ -1,9 +1,13 @@
 {
 	"dotnet.defaultSolution": "MOD_NAME.sln",
 
-	"files.trimTrailingWhitespace": true,
-
 	// Using tabs allows each dev to choose the tab size that suits their preference
 	"editor.insertSpaces": false,
-	"editor.detectIndentation": false
+	"editor.detectIndentation": false,
+
+	// Remove trailing whitespace in all files except markdown files
+	"files.trimTrailingWhitespace": true,
+	"[markdown]": {
+		"files.trimTrailingWhitespace": false
+	}
 }

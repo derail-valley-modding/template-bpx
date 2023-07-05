@@ -8,7 +8,7 @@ namespace MOD_NAME
 		private void Awake()
 		{
 			// Plugin startup logic
-			Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+			Logger.LogInfo($"Plugin [{PluginInfo.PLUGIN_GUID}|{PluginInfo.PLUGIN_NAME}|{PluginInfo.PLUGIN_VERSION}] is loaded!");
 		}
 	}
 }

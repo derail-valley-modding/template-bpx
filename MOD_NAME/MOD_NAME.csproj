@@ -10,23 +10,31 @@
 		<WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
 	</PropertyGroup>
 
-	<!-- BepInEx & Unity -->
 	<ItemGroup>
+		<!-- Derail Valley -->
+		<Reference Include="Assembly-CSharp" />
+
+		<!-- Third Party -->
+
+		<!-- Unity -->
+		<PackageReference Include="UnityEngine.Modules" Version="2019.4.40" IncludeAssets="compile" />
+
+		<!-- Mod Loader -->
 		<PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
 		<PackageReference Include="BepInEx.Core" Version="5.*" />
 		<PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
-		<PackageReference Include="UnityEngine.Modules" Version="2019.4.40" IncludeAssets="compile" />
-	</ItemGroup>
 
-	<!-- Null Checking -->
-	<ItemGroup>
+		<!-- Null Checking -->
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
 		<PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" />
 	</ItemGroup>
 
-	<!-- Derail Valley -->
-	<ItemGroup>
-		<Reference Include="Assembly-CSharp" />
-		<!-- Add more Derail Valley assembly references as needed -->
-	</ItemGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<!-- Copy to build folder -->
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="../build/"/>
+
+		<!-- Package after Release build -->
+		<Exec Condition="'$(ConfigurationName)' == 'Release' And '$(OS)' == 'Windows_NT'" Command="powershell -executionpolicy bypass -Command &quot;(../package.ps1)&quot;"/>
+		<Exec Condition="'$(ConfigurationName)' == 'Release' And '$(OS)' != 'Windows_NT'" Command="pwsh  -Command &quot;(../package.ps1)&quot;"/>
+	</Target>
 </Project>
