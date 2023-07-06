@@ -53,7 +53,7 @@ TODO: Instructions for how mod creators use this template.
 
 Building the project requires some initial setup, after which running `dotnet build` will do a Debug build or running `dotnet build -c Release` will do a Release build.
 
-### Environment Setup
+### References Setup
 
 After cloning the repository, some setup is required in order to successfully build the mod DLLs. You will need to create a new [Directory.Build.targets][references-url] file to specify your local reference paths. This file will be located in the main directory, next to MOD_NAME.sln.
 
@@ -68,6 +68,10 @@ Below is an example of the necessary structure. When creating your targets file,
 	</PropertyGroup>
 </Project>
 ```
+
+### Line Endings Setup
+
+It's recommended to use Git's [autocrlf mode][autocrlf-url] on Windows. Activate this by running `git config --global core.autocrlf true`.
 
 
 
@@ -121,3 +125,4 @@ See [LICENSE][license-url] for more information.
 [issues-url]: https://github.com/derail-valley-modding/template-bpx/issues
 [license-shield]: https://img.shields.io/github/license/derail-valley-modding/template-bpx.svg?style=for-the-badge
 [license-url]: https://github.com/derail-valley-modding/template-bpx/blob/master/LICENSE
+[autocrlf-url]: https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_formatting_and_whitespace
