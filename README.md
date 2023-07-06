@@ -14,9 +14,9 @@
 	A template for creating <a href="http://www.derailvalley.com/">Derail Valley</a> mods that load via <a href="https://docs.bepinex.dev/articles/index.html">BepInEx</a>.
 	<br />
 	<br />
-	<a href="https://github.com/fauxnik/dv-smooth-camera/issues">Report Bug</a>
+	<a href="https://github.com/derail-valley-modding/template-bpx/issues">Report Bug</a>
 	·
-	<a href="https://github.com/fauxnik/dv-smooth-camera/issues">Request Feature</a>
+	<a href="https://github.com/derail-valley-modding/template-bpx/issues">Request Feature</a>
   </p>
 </div>
 
