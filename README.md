@@ -125,4 +125,5 @@ See [LICENSE][license-url] for more information.
 [issues-url]: https://github.com/derail-valley-modding/template-bpx/issues
 [license-shield]: https://img.shields.io/github/license/derail-valley-modding/template-bpx.svg?style=for-the-badge
 [license-url]: https://github.com/derail-valley-modding/template-bpx/blob/master/LICENSE
+[references-url]: https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022
 [autocrlf-url]: https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_formatting_and_whitespace
