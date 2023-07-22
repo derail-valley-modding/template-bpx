@@ -11,6 +11,12 @@
 <div align="center">
   <h1>BepInEx Mod Template</h1>
   <p>
+    <h3>⚠️ Warning ⚠️</h3>
+    <h5>
+      We've switched back to Unity Mod Manager, and in accordance, have <a href="https://github.com/derail-valley-modding/template-umm">created a new template for UMM mods</a>.
+	  <br />
+	  This template is no longer maintained, and should not be used. It is public only for archival purposes.
+    </h5>
 	A template for creating <a href="http://www.derailvalley.com/">Derail Valley</a> mods that load via <a href="https://docs.bepinex.dev/articles/index.html">BepInEx</a>.
 	<br />
 	<br />
